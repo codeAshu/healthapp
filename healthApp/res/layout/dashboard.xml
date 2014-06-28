@@ -1,25 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#3b3b3b">
-    
-    <TextView android:layout_width="fill_parent"
-        	  android:layout_height="wrap_content"
-        	  android:text="WELCOME"
-        	  android:textSize="40dip"
-        	  android:gravity="center"
-        	  android:layout_marginTop="20dip"/>
-    
-    <Button android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Logout Me"
-        android:textSize="20dip"
-        android:textColor="#21dbd4"
-        android:textStyle="bold" 
-        android:id="@+id/btnLogout"
-        android:layout_marginTop="80dip"
-        android:background="@null"/>
+    android:background="@color/white"
+     android:padding="5dp"
+    android:weightSum="2" > 
+   
+    <LinearLayout   
+        android:id="@+id/user"
+        android:background="@color/white"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1" >
 
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="136dp"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:text="User"
+            android:textSize="40dip" />
+	        
+	</LinearLayout> 
+    
+    <LinearLayout  
+        android:id="@+id/doctor"
+        android:background="#adf7c3"
+        android:layout_height="0dp"
+        android:textStyle="bold" 
+        android:layout_width="match_parent"
+        android:layout_weight="1" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="159dp"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:text="Doctor"
+            android:textSize="40dip" />
+	        
+	</LinearLayout>
 </LinearLayout>
+ 
