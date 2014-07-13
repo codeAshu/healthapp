@@ -21,12 +21,13 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     
     <application
+        android:name=".HealthApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.iiitb.healthapp.LoginActivity"
+            android:name="com.iiitb.healthapp.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,9 +35,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    <!--  Entry for RegisterActivity.class -->
-        <activity android:name=".RegisterActivity"
+   <!--  Entry for loginActivity.class -->
+        <activity android:name=".LoginUserActivity"
+                  android:label="login to your Account"></activity>
+        
+        <!--  Entry for RegisterActivity.class -->
+        <activity android:name=".RegisterUserActivity"
                   android:label="Register New Account"></activity>
+        
+        <!--  Entry for loginActivity.class -->
+        <activity android:name=".LoginDocActivity"
+                  android:label="login to your Account"></activity>
+        
+        <!--  Entry for RegisterActivity.class -->
+        <activity android:name=".RegisterDocActivity"
+                  android:label="Register New Account"></activity>
+         
+         <!--  Entry for DocViewFamilyActivity.class -->
+        <activity android:name=".DocViewFamilyActivity"
+                  android:label="Registerd Families"></activity>
         
         <!--  Entry for dummy.class -->
         <activity android:name=".DashboardActivity"

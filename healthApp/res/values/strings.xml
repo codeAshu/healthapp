@@ -4,5 +4,8 @@
     <string name="app_name">healthApp</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
+    <string name="Families">Families</string>
+    <string name="no_fam">No Families</string>
+<string name="remove_completed">Remove</string>
+    
 </resources>

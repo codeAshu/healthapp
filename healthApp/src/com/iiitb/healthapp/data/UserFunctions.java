@@ -17,8 +17,8 @@ public class UserFunctions {
 	private static String loginURL = "http://10.0.2.2/healthapp/";;
 	private static String registerURL = "http://10.0.2.2/healthapp/";
 	
-	private static String login_tag = "login";
-	private static String register_tag = "register";
+	private static String login_tag = "loginUser";
+	private static String register_tag = "registerUser";
 	
 	// constructor
 	public UserFunctions(){
