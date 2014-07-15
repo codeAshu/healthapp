@@ -6,6 +6,154 @@
     <string name="action_settings">Settings</string>
     <string name="Families">Families</string>
     <string name="no_fam">No Families</string>
-<string name="remove_completed">Remove</string>
+<string name="tasks">Tasks</string>
+    <string name="add_task">Add Task</string>
+    <string name="cancel">Cancel</string>
+    <string name="unsaved_changes_title">Unsaved Changes</string>
+    <string name="unsaved_changes_message">Would you like to add this task?</string>
+    <string name="discard">Discard</string>
+    <string name="no_tasks">No Tasks.</string>
+    <string name="remove_completed">Remove Completed</string>
+    <string name="add_location_to_task">Add location to Task</string>
+    <string name="map_this_address">Map this Address</string>
+    <string name="use_this_location">Use this Location</string>
+    <string name="members">Members</string>
+    <string name="family_members">Family Members</string>
+    <string name="insert_member_details">Insert member details</string>
+    <string name="add_member">Add Member</string>
+    <string name="i_am_a_">"I am a "</string>
+    <string name="and_my_age_is_">"And My age is "</string>
+	
+	<string-array name="sex_array">
+        <item>Male</item>
+        <item>Female</item>
+        
+    </string-array>
+    
+	<string-array name="blood_array">
+        <item> A+ </item>
+        <item> A- </item>
+        <item> B+ </item>
+        <item> B- </item>
+        <item> AB+ </item>
+        <item> AB- </item>
+        <item> O+ </item>
+        <item> O- </item>
+        
+    </string-array>
+	
+	<string-array name="age_array">
+        <item> 1</item>
+		<item> 2</item>
+		<item> 3</item>
+		<item> 4</item>
+		<item> 5</item>
+		<item> 6</item>
+		<item> 7</item>
+		<item> 8</item>
+		<item> 9</item>
+		<item>10</item>
+		<item>11</item>
+		<item>12</item>
+		<item>13</item>
+		<item>14</item>
+		<item>15</item>
+		<item>16</item>
+		<item>17</item>
+		<item>18</item>
+		<item>19</item>
+		<item>20</item>
+		<item>21</item>
+		<item>22</item>
+		<item>23</item>
+		<item>24</item>
+		<item>25</item>
+		<item>26</item>
+		<item>27</item>
+		<item>28</item>
+		<item>29</item>
+		<item>30</item>
+		<item>31</item>
+		<item>32</item>
+		<item>33</item>
+		<item>34</item>
+		<item>35</item>
+		<item>36</item>
+		<item>37</item>
+		<item>38</item>
+		<item>39</item>
+		<item>40</item>
+		<item>41</item>
+		<item>42</item>
+		<item>43</item>
+		<item>44</item>
+		<item>45</item>
+		<item>46</item>
+		<item>47</item>
+		<item>48</item>
+		<item>49</item>
+		<item>50</item>
+		<item>51</item>
+		<item>52</item>
+		<item>53</item>
+		<item>54</item>
+		<item>55</item>
+		<item>56</item>
+		<item>57</item>
+		<item>58</item>
+		<item>59</item>
+		<item>60</item>
+		<item>61</item>
+		<item>62</item>
+		<item>63</item>
+		<item>64</item>
+		<item>65</item>
+		<item>66</item>
+		<item>67</item>
+		<item>68</item>
+		<item>69</item>
+		<item>70</item>
+		<item>71</item>
+		<item>72</item>
+		<item>73</item>
+		<item>74</item>
+		<item>75</item>
+		<item>76</item>
+		<item>77</item>
+		<item>78</item>
+		<item>79</item>
+		<item>80</item>
+		<item>81</item>
+		<item>82</item>
+		<item>83</item>
+		<item>84</item>
+		<item>85</item>
+		<item>86</item>
+		<item>87</item>
+		<item>88</item>
+		<item>89</item>
+		<item>90</item>
+		<item>91</item>
+		<item>92</item>
+		<item>93</item>
+		<item>94</item>
+		<item>95</item>
+		<item>96</item>
+		<item>97</item>
+		<item>98</item>
+		<item>99</item>
+        
+    </string-array>
+		<string name="my_weight_is_">"My weight is "</string>
+		<string name="kilograms">Kilograms</string>
+		<string name="my_height_is_">"My Height is "</string>
+		<string name="cms">cms</string>
+		<string name="blood_group">Blood Group</string>
+		<string name="_kgs">"   Kgs"</string>
+		<string name="add_doctor">Add Doctor</string>
+		<string name="please_add_a_doctor">Please add a doctor</string>
+		<string name="no_members_are_there_in_your_family_">No members are there in your family!</string>
+		<string name="please_select_a_doctor_">Please select a doctor.</string>
+    
     
 </resources>

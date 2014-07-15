@@ -54,6 +54,26 @@
          <!--  Entry for DocViewFamilyActivity.class -->
         <activity android:name=".DocViewFamilyActivity"
                   android:label="Registerd Families"></activity>
+       
+          <!--  Entry for NewVisitActivity.class -->
+        <activity android:name=".NewVisitActivity"
+                  android:label="Add the visit details"></activity>
+       
+        
+        <!--  Entry for ViewMemberActivity.class -->
+        <activity android:name=".ViewMemActivity"
+                  android:label="Add the Members of the family"></activity>
+        
+        
+          <!--  Entry for AddMemberActivity.class -->
+        <activity android:name=".AddMemberActivity"
+                  android:label="Add the Members of the family"></activity>
+        
+         <!--  Entry for AddDoctorActivity.class -->
+        <activity android:name=".AddDoctorActivity"
+                  android:label="Add the Doctor of the family"></activity>
+        
+        
         
         <!--  Entry for dummy.class -->
         <activity android:name=".DashboardActivity"
