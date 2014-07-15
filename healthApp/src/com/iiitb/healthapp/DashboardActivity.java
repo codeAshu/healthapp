@@ -29,9 +29,9 @@ public class DashboardActivity extends Activity {
     			public void onClick(View arg0) {
     				// TODO Auto-generated method stub
     				userFunctions.logoutUser(getApplicationContext());
-    				Intent login = new Intent(getApplicationContext(), LoginUserActivity.class);
-    	        	login.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-    	        	startActivity(login);
+    				Intent mainAct = new Intent(getApplicationContext(), MainActivity.class);
+    				mainAct.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+    	        	startActivity(mainAct);
     	        	// Closing dashboard screen
     	        	finish();
     			}

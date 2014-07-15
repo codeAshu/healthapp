@@ -1,8 +1,7 @@
 package com.iiitb.healthapp;
 
-import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import org.apache.http.*;
@@ -11,7 +10,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.iiitb.healthapp.data.JSONParser;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -22,9 +20,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.TextView;
 
-public class NewVisitActivity extends Activity {
+public class NewVisitActivity extends Activity  {
 
 	// Progress Dialog
 	private ProgressDialog pDialog;
@@ -34,16 +32,14 @@ public class NewVisitActivity extends Activity {
 	EditText Medication;
 	EditText Doses;
 	EditText Comments;
-	DatePicker fromDatePick;
-	DatePicker toDatePick;
 	int   day  ;
 	int   month;
 	int   year ;
-	String formDate;
-	String toDate;
+	EditText formDate;
+	EditText toDate;
 	String familyId;
 	String memId;
-
+	TextView mDateTextView;
 
 	// url to create new product
 	private static String url_create_product = "http://10.0.2.2/healthapp/enter_visit.php";
@@ -56,36 +52,20 @@ public class NewVisitActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.add_visit);
 
-		Bundle bundle = getIntent().getExtras();
-        familyId = bundle.getString("familyId");
-        memId = bundle.getString("memId");
-        
-		
+		//	Bundle bundle = getIntent().getExtras();
+		//    familyId = bundle.getString("familyId");
+		//    memId = bundle.getString("memId");
+
+
 		// Edit Text
 		Symptoms = (EditText) findViewById(R.id.symptoms);
 		Medication = (EditText) findViewById(R.id.medicin);
 		Doses = (EditText) findViewById(R.id.doses);
 		Comments = (EditText) findViewById(R.id.comments);
-		fromDatePick = (DatePicker) findViewById(R.id.from_date);
-		toDatePick = (DatePicker) findViewById(R.id.to_date);
-
-		day  = fromDatePick.getDayOfMonth();
-		month= fromDatePick.getMonth();
-		year = fromDatePick.getYear();
-
-		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-		formDate = sdf.format(new Date(year, month, day));
-
-		day  = toDatePick.getDayOfMonth();
-		month= toDatePick.getMonth();
-		year = toDatePick.getYear();
-
-		sdf = new SimpleDateFormat("dd-MM-yyyy");
-		toDate = sdf.format(new Date(year, month, day));
-
-
-
-
+		formDate = (EditText) findViewById(R.id.from_date);
+		toDate = (EditText) findViewById(R.id.to_date);
+	
+		
 		// Create button
 		Button btnCreateProduct = (Button) findViewById(R.id.enter);
 
@@ -100,6 +80,9 @@ public class NewVisitActivity extends Activity {
 		});
 	}
 
+	
+	
+	
 	/**
 	 * Background Async Task to Create new product
 	 * */
@@ -126,22 +109,22 @@ public class NewVisitActivity extends Activity {
 			String meds = Medication.getText().toString();
 			String doses = Doses.getText().toString();
 			String comments = Comments.getText().toString();
-		//	String fromDate = fromDate;
-		//	String toDate = toDate;
+			String fromd = formDate.getText().toString();;
+			String tod = toDate.getText().toString();;
 
 			// Building Parameters
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
-			params.add(new BasicNameValuePair("famId", "10"));
-			params.add(new BasicNameValuePair("memId", "10"));
+			params.add(new BasicNameValuePair("famId", Integer.toString(HealthApplication.fid)));
+			params.add(new BasicNameValuePair("memId", Integer.toString(HealthApplication.mid)));
 			params.add(new BasicNameValuePair("symptoms", syms));
 			params.add(new BasicNameValuePair("medicins", meds));
 			params.add(new BasicNameValuePair("doses", doses));
 			params.add(new BasicNameValuePair("comments", comments));
-			params.add(new BasicNameValuePair("fromDate", formDate));
-			params.add(new BasicNameValuePair("toDate", toDate));
+			params.add(new BasicNameValuePair("fromDate", fromd));
+			params.add(new BasicNameValuePair("toDate", tod));
 
 			System.out.println(params.toString());
-			
+
 			// getting JSON Object
 			// Note that create product url accepts POST method
 			JSONObject json = jsonParser.makeHttpRequest(url_create_product,
@@ -157,7 +140,7 @@ public class NewVisitActivity extends Activity {
 				if (success == 1) {
 					// successfully created product
 					Log.d("Create Response", json.toString());
-					
+
 					Intent i = new Intent(getApplicationContext(), DocViewFamilyActivity.class);
 					startActivity(i);
 
@@ -182,4 +165,5 @@ public class NewVisitActivity extends Activity {
 		}
 
 	}
+
 }

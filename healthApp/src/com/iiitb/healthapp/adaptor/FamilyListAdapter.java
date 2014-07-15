@@ -53,28 +53,7 @@ public class FamilyListAdapter extends BaseAdapter {
 		notifyDataSetChanged();
 	}
 
-	public void toggleTaskCompleteAtPosition(int position) {
-		Family t = fam.get(position);
-		t.toggleComplete();
-		notifyDataSetChanged();
-		
-	}
-
-	public Long[] removeCompletedTasks() {
-		ArrayList<Family> completedTasks = new ArrayList<Family>();
-		ArrayList<String> ids = new ArrayList<String>();
-		for(Family task : fam){
-			if(task.isComplete()){
-				completedTasks.add(task);
-				ids.add(task.getId());
-			}
-		}
-		fam.removeAll(completedTasks);
-		notifyDataSetChanged();
-		
-		return ids.toArray(new Long[]{});
-		
-	}
+	
 
 
 }

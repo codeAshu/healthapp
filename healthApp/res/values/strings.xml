@@ -23,7 +23,7 @@
     <string name="add_member">Add Member</string>
     <string name="i_am_a_">"I am a "</string>
     <string name="and_my_age_is_">"And My age is "</string>
-	
+	 <string name="strSelectedDate">"Please select the  to Date "</string>
 	<string-array name="sex_array">
         <item>Male</item>
         <item>Female</item>

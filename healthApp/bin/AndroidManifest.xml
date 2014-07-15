@@ -62,6 +62,10 @@
         
         <!--  Entry for ViewMemberActivity.class -->
         <activity android:name=".ViewMemActivity"
+                  android:label="View the Members of the family"></activity>
+        
+         <!--  Entry for MemberActivity.class -->
+        <activity android:name=".MemberActivity"
                   android:label="Add the Members of the family"></activity>
         
         

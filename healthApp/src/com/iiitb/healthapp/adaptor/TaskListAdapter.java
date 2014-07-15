@@ -40,7 +40,7 @@ public class TaskListAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		TaskListItem tli;
 		if(null == convertView){
-			tli = (TaskListItem)View.inflate(context, R.layout.task_list_item, null);
+			tli = (TaskListItem)View.inflate(context, R.layout.task_list_item_piyush, null);
 		}
 		else{
 			tli = (TaskListItem)convertView;
